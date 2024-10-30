@@ -1,0 +1,303 @@
+.mjfreeway {
+  a {
+    text-decoration: underline;
+  }
+  button,
+  a.btn {
+    background-color: #222;
+    border: 0;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    padding: 1em 2em;
+    text-shadow: none;
+    -webkit-transition: background 0.2s;
+    transition: background 0.2s;
+    text-decoration: none;
+    &:hover {
+      background-color: #444;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  &.products-list {
+    .categories {
+      .category-link {
+        display: block;
+        padding: 5px 0;
+      }
+    }
+    .products-list-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &.confirmation {
+    h2 {
+      margin-top: 0;
+      padding: 0;
+    }
+  }
+  &.checkout {
+    .table tr th:last-child,
+    .table tr td:last-child {
+      width: 55px;
+    }
+    .remove-icon {
+      width: 15px;
+      opacity: 0.7;
+      cursor: pointer;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .required {
+      color: red;
+    }
+    .plus-tax {
+      font-size: 12px;
+    }
+    .actions {
+      .reserve-order {
+        margin-top: 20px;
+      }
+    }
+    .view-products {
+      display: inline-block;
+      padding: 20px 0;
+    }
+    .guest-reservation-header {
+      .already-member {
+        font-size: 1rem;
+      }
+    }
+  }
+  &.product-detail {
+    .list-image {
+      width: 100%;
+      display: block;
+    }
+    .actions {
+      margin-bottom: 20px;
+    }
+    .description {
+      margin-bottom: 1rem;
+    }
+    .quantity {
+      padding: 20px 0;
+      .selectQuantity {
+        height: calc(2.25rem + 2px);
+        @media(min-width: 768px) {
+          max-width: 100px;
+        }
+      }
+    }
+    .price {
+      font-size: 1.5rem;
+    }
+    input[type=radio].price-amount,
+    input[type=checkbox].price-amount {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    input[type=radio].price-amount ~ label:before,
+    input[type=checkbox].price-amount ~ label:before {
+      font-family: FontAwesome;
+      display: inline-block;
+      content: "\f1db";
+      letter-spacing: 10px;
+      font-size: 1.2em;
+      color: #535353;
+      width: 1.4em;
+      cursor: pointer;
+    }
+
+    input[type=radio].price-amount:checked ~ label:before,
+    input[type=checkbox].price-amount:checked ~ label:before  {
+      content: "\f00c";
+      font-size: 1.2em;
+      color: darkgreen;
+      letter-spacing: 5px;
+    }
+    input[type=checkbox].price-amount ~ label:before {
+      content: "\f096";
+    }
+    input[type=checkbox].price-amount:checked ~ label:before {
+      content: "\f046";
+      color: darkgreen;
+    }
+    input[type=radio].price-amount:focus ~ label:before,
+    input[type=checkbox].price-amount:focus ~ label:before
+    {
+      color: green;
+    }
+  }
+  .cart-icon-container {
+    position: relative;
+    .cart-icon {
+      width: 25px;
+    }
+    .cart-quantity {
+      background: red;
+      color: #fff;
+      padding: 0 5px;
+      border-radius: 10px;
+      position: absolute;
+      top: -10px;
+      right: -7px;
+      font-size: 12px;
+    }
+  }
+  .card {
+    float: left;
+    width: 100%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    border: 0;
+    .card-title {
+      padding: 0;
+      margin: 10px 0;
+    }
+    .card-text {
+      font-size: 85%;
+    }
+    .card-image {
+      background-position: center center;
+      background-size: cover;
+      height: 150px;
+      display: block;
+    }
+    & > img {
+      margin-bottom: .75rem;
+      width: 100%;
+      display: block;
+    }
+  }
+  .table {
+    table-layout: fixed;
+    &.table-responsive {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+    &.table-striped tbody tr:nth-of-type(even) {
+      background-color: rgba(0, 0, 0, .05);
+    }
+    td,
+    th {
+      padding: .75rem;
+      border-top: 1px solid #eceeef;
+    }
+    .thead-default th {
+      color: #464a4c;
+      background-color: #eceeef;
+    }
+  }
+  .price-container {
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #464a4c;
+    background-color: #fff;
+    background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .absolute-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .alert {
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    &.danger {
+      background-color: #f2dede;
+      border-color: #ebcccc;
+      color: #a94442;
+    }
+  }
+
+  @media (min-width: 500px) {
+    .card {
+      width: 50%;
+    }
+
+    .card {
+      .card-image {
+        height: 175px;
+      }
+    }
+
+    .col table.table-responsive {
+      display: table;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .card {
+      width: 33.333%;
+    }
+
+    .card {
+      .card-image {
+        height: 200px;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .card {
+      width: 25%;
+    }
+    .card {
+      .card-image {
+        height: 225px;
+      }
+    }
+  }
+}
